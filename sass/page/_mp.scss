@@ -284,10 +284,10 @@
     .aCenter{
         text-align: center;
         @include screen('mobile') {
-         text-align: left; 
-     }
- }
- .leave{
+           text-align: left; 
+       }
+   }
+   .leave{
     margin-right: .5em;
 }
 
@@ -312,10 +312,10 @@
     .aCenter{
         text-align: center;
         @include screen('mobile') {
-         text-align: left; 
-     }
- }
- .leave{
+           text-align: left; 
+       }
+   }
+   .leave{
     margin-right: .5em;
 }
 
@@ -370,10 +370,10 @@
 }
 
 .right_col{
- .Official{
-   ul{
-    display: block;
-}
+   .Official{
+     ul{
+        display: block;
+    }
 } 
 }
 
@@ -438,14 +438,14 @@
         padding-bottom: 0;
     }
     h3{
-        color:#fff;
+        columns: #222;
         height: 51px;
         line-height: 2.75em;
         margin:0;
         padding: 0 1em;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
-        background: $primaryColor;
+        background: #d0d1ce;
         // background: -moz-linear-gradient(90deg, rgba(0,162,208,1) 0%, rgba(3,163,208,1) 50%, rgba(59,194,208,1) 100%);
         // background: -webkit-linear-gradient(90deg, rgba(0,162,208,1) 0%, rgba(3,163,208,1) 50%, rgba(59,194,208,1) 100%);
         // background: linear-gradient(90deg, rgba(0,162,208,1) 0%, rgba(3,163,208,1) 50%, rgba(59,194,208,1) 100%);
@@ -532,10 +532,10 @@
     margin: 0 1em 2em\0;
     -webkit-margin: 0 1em 2em;
     @media screen and (max-width: 768px) {
-       margin: 0 0 2em;
-       margin: 0 0 2em\0;
-       -webkit-margin: 0 0 2em; 
-   }
+     margin: 0 0 2em;
+     margin: 0 0 2em\0;
+     -webkit-margin: 0 0 2em; 
+ }
 }  
 }
 
