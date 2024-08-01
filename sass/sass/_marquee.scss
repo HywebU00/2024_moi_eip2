@@ -1,0 +1,111 @@
+.marquee {
+    height: 45px;
+    display: block;
+    overflow: hidden;
+    // background: #FFF;
+    margin: -2.3em 0 0 5em;
+    text-align: left;
+    padding: 0 2em 0 0;
+    position: relative;
+    min-height: 1px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    // border-bottom: 1px solid #dadada;
+    @media(max-width:991px) {
+        margin: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none
+    }
+    .slick-prev {
+        display: none!important;
+        width: 10px;
+        height: 10px;
+        transform: rotate(90deg);
+        right: 0px !important;
+        top: 1px !important;
+        left: auto;
+        opacity: .5;
+        background: url('../vendor/slick/icon_arrow_up_s.png') no-repeat center center;
+        background-size: 16px;
+        width: 20px !important;
+        height: 20px !important;
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+            opacity: 1
+        }
+        &:before {
+            width: 10px !important;
+            height: 10px !important
+        }
+    }
+    .slick-next {
+        display: none!important;
+        width: 10px;
+        height: 10px;
+        transform: rotate(-90deg);
+        right: 0px !important;
+        top: 22px !important;
+        left: auto;
+        opacity: .5;
+        width: 20px !important;
+        height: 20px !important;
+        background: url('../vendor/slick/icon_arrow_up_s.png') no-repeat center center;
+        background-size: 16px;
+        box-shadow: none;
+        &:hover,
+        &:focus {
+            opacity: 1
+        }
+        &:before {
+            width: 10px !important;
+            height: 10px !important
+        }
+    }
+    >div {
+        padding: 0;
+        margin: 0
+    }
+    a {
+        display: block;
+        line-height: 2em;
+        margin-right: 3em;
+        font-weight: bold;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #111;
+        text-decoration: none;
+        &:hover{
+            color:#dc0a28;
+        }
+    }
+    @include screen('mobile') {
+       padding: 0; 
+       a{
+        margin-right: 0;
+    }
+}
+}
+
+.fast-btn{
+  color:#fff;
+  background: #dc0a28;
+  border: solid 1px #dc0a28;
+  border-radius: 3px;
+  display: inline-block;
+  padding: .3em 1em;
+  margin:.2em 0;
+  &:hover, &:focus{
+      background:darken(#dc0a28, 8); 
+      color:#fff;
+      border: solid 1px #dc0a28; 
+  }
+}
+
