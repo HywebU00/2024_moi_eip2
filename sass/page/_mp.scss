@@ -140,7 +140,7 @@
 //reflash2
 .reflash2{
     font-size: 0;
-    background:$primaryColor url('../images/icon_reflash.png')no-repeat center center;
+    background:#999 url('../images/icon_reflash.png')no-repeat center center;
     width: 52px;
     height: 52px;
     position: absolute;
@@ -150,7 +150,7 @@
     border: none;
     // border-top-right-radius: 3px;
     &:hover, &:focus{
-        background:#336600 url('../images/icon_reflash.png')no-repeat center center;
+        background:#888 url('../images/icon_reflash.png')no-repeat center center;
         border: none!important;  
     }
 }
@@ -176,7 +176,7 @@
 //close-w2
 .close-w2{
     font-size: 0;
-    background:$primaryColor url('../images/icon_close.png')no-repeat center center;
+    background:#999 url('../images/icon_close.png')no-repeat center center;
     width: 52px;
     height: 52px;
     position: absolute;
@@ -187,7 +187,7 @@
     border-left: solid 1px #fff;
     border-top-right-radius: 3px;
     &:hover, &:focus{
-        background:#336600 url('../images/icon_close.png')no-repeat center center;
+        background:#888 url('../images/icon_close.png')no-repeat center center;
         border: none!important;
         border: none;
         border-left: solid 1px #fff!important;
@@ -284,10 +284,10 @@
     .aCenter{
         text-align: center;
         @include screen('mobile') {
-           text-align: left; 
-       }
-   }
-   .leave{
+         text-align: left; 
+     }
+ }
+ .leave{
     margin-right: .5em;
 }
 
@@ -312,10 +312,10 @@
     .aCenter{
         text-align: center;
         @include screen('mobile') {
-           text-align: left; 
-       }
-   }
-   .leave{
+         text-align: left; 
+     }
+ }
+ .leave{
     margin-right: .5em;
 }
 
@@ -370,10 +370,10 @@
 }
 
 .right_col{
-   .Official{
-     ul{
-        display: block;
-    }
+ .Official{
+   ul{
+    display: block;
+}
 } 
 }
 
@@ -532,10 +532,10 @@
     margin: 0 1em 2em\0;
     -webkit-margin: 0 1em 2em;
     @media screen and (max-width: 768px) {
-     margin: 0 0 2em;
-     margin: 0 0 2em\0;
-     -webkit-margin: 0 0 2em; 
- }
+       margin: 0 0 2em;
+       margin: 0 0 2em\0;
+       -webkit-margin: 0 0 2em; 
+   }
 }  
 }
 
