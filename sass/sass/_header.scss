@@ -160,7 +160,7 @@
                 display: block;
                 text-decoration: none;
                 @include aSetting_nocolor;
-                padding: 0 2em;
+                padding: 0 1em;
                 height: 70px;
                 line-height: 4.4em;
             }
@@ -171,13 +171,21 @@
             line-height: 4.4em;
             @media screen and (max-width: 1110px) {
                 position: absolute;
-                right:240px;
+                right:200px;
                 top:5px;
                 background: none;
                 line-height: 1em;
                 padding: 0;
                 font-size: .875em;
                 z-index: 3;
+            }
+        }
+        .link{
+            padding: 0 1em 0 1em;
+            background: url('../images/nav_libg.png')no-repeat right center;
+            line-height: 4.4em;
+            a{
+                padding: 0;
             }
         }
         .people{
