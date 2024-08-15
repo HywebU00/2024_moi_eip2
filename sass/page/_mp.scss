@@ -226,13 +226,14 @@
             text-align: center;
             a{
                 display: block;
-                width: 112px;
+                width: 90%;
                 // height: 160px;
                 margin: 0 auto;
                 color:#111;
                 font-weight: bold;
                 font-size: 1em;
                 position: relative;
+                clear: both;
 
                 img{
                     width: 111px;
@@ -248,6 +249,9 @@
                         transform: scale(1.1);
                     }
                 }
+                .txt{
+                    width: 100%;
+                }
                 .num{
                     font-size: .938em;
                     background: #dc0a28;
@@ -260,9 +264,9 @@
                     line-height: 1.3em;
                     text-align: center;
                     margin: 0 0 0 3px;
-                    position: absolute;
-                    top:-5px;
-                    right: -.5em;
+                    // position: absolute;
+                    // top:-5px;
+                    // right: -.5em;
                 }
             }
         }
@@ -275,7 +279,7 @@
                 // flex:0 1 30%;
                 // margin-bottom: 1em;
                 a{
-                    width: 80px;
+                    // width: 80px;
                     // height: 100px;
                     img{
                         width: 80px;
@@ -295,8 +299,9 @@
                 flex:0 1 33%;
                 margin-bottom: 1em;
                 a{
-                    width: 86px;
+                    // width: 86px;
                     // height: 130px;
+                    width: 80%;
                     img{
                         width: 80px;
                         height: 80px;
@@ -314,7 +319,7 @@
                 flex:0 1 50%;
                 margin-bottom: 1em;
                 a{
-                    width: 86px;
+                    width: 80%;
                     // height: 130px;
                     img{
                         width: 80px;
