@@ -93,12 +93,12 @@ $(function() {
         });
     });
     // _menu.find('li').keyup(function() {
-        _menu.children('ul').children('li').keyup(function() {
-            $(this).siblings().children('ul').hide();
-        });
-        _menu.find('li:last>a').focusout(function() {
-            _menu.find('li ul').hide();
-        });
+    _menu.children('ul').children('li').keyup(function() {
+        $(this).siblings().children('ul').hide();
+    });
+    _menu.find('li:last>a').focusout(function() {
+        _menu.find('li ul').hide();
+    });
 
     // 先複製過去
     _nav.clone().prependTo(_mArea);
@@ -411,8 +411,8 @@ $(function() {
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
-                // tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
-                // _tabItem.width(tabItemWidth).css('margin-left', tiGap);
+                tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
+                _tabItem.width(tabItemWidth).css('margin-left', tiGap);
                 _tabItem.first().css('margin-left', 0);
                 // _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
             } else {

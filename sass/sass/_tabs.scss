@@ -23,9 +23,13 @@
     // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00a2d0",endColorstr="#37bfd0",GradientType=1);
 
     &>.tabItem {
-        &.active>a {
-            color: #070707;
-            border-radius: 30px;
+        width: auto!important;
+        &:active{
+           width: auto!important;
+       }
+       &.active>a {
+        color: #070707;
+        border-radius: 30px;
             background: #ffffff; /* Old browsers */
                 background: -moz-linear-gradient(top,  #ffffff 0%, #edebeb 100%); /* FF3.6-15 */
                 background: -webkit-linear-gradient(top,  #ffffff 0%,#edebeb 100%); /* Chrome10-25,Safari5.1-6 */
@@ -115,6 +119,7 @@
     padding: 15px 25px 50px!important;
     display: none;
     background: #fff;
+    z-index:1;
     @include screen('mobile') {
         position: static;
         padding: 20px!important;
@@ -248,8 +253,6 @@
 
       }
   }
-
-
 
 
 }
