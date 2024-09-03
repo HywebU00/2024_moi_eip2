@@ -6,8 +6,6 @@
     z-index: 99;
     border-radius: 3px;
     background: #518113;
-
-
     // 預設選單 ul
     clear: both;
     @include screen('tablet') {
@@ -30,7 +28,6 @@
         }
         // 第一層選單樣式
         >li {
-            // display: inline-block;
             vertical-align: top;
             flex:1 1 25%;
             max-width: 100%;
@@ -48,98 +45,81 @@
                 padding: .1em 2em 0;
                 padding: .1em 2em 0\0;
                 -webkit-padding: .15em 2em 0;
-                // min-width: 6em;
                 &:hover, &:focus{
                     color:#070707;
                     border-radius: 2em;
-                background: #ffffff; /* Old browsers */
-                background: -moz-linear-gradient(top,  #ffffff 0%, #edebeb 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(top,  #ffffff 0%,#edebeb 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(to bottom,  #ffffff 0%,#edebeb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edebeb',GradientType=0 ); /* IE6-9 */
+                    background: #ffffff;
+                    background: -moz-linear-gradient(top,  #ffffff 0%, #edebeb 100%);
+                    background: -webkit-linear-gradient(top,  #ffffff 0%,#edebeb 100%);
+                    background: linear-gradient(to bottom,  #ffffff 0%,#edebeb 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edebeb',GradientType=0 );
+                }
 
             }
-
         }
-            // &.hasChild {
-                    // position: relative;
-                    // &:after {
-                    //     content: '';
-                    //     width: 1px;
-                    //     height: .8em;
-                    //     background: #fff;
-                    //     transform: rotate(0deg);
-                    //     position: absolute;
-                    //     top:1em;
-                    //     right:0;
-                    //     display: inline-block;
-                        // margin-left: .5em;
-                        // vertical-align: middle;
-                        // border: 2px solid lighten($color-word, 40);
-                        // transform: rotate(135deg);
-                        // border-bottom: none;
-                        // border-left: none;
-                        // margin-bottom: .2em;
-                    // }
-                // }
-            // }
 
 
-            // &:hover {
-            //     >a {
-            //         color: $aHover;
-            //         &:after {
-            //             // border: 2px solid $aHover;
-            //             // border-bottom: none;
-            //             // border-left: none;
-            //         }
-            //     }
-            // }
-        }
     }
     ul {
         li {
-
             ul {
                 font-size: 1em;
                 display: flex;
                 overflow: visible;
                 width: 100% !important;
-                padding: 10px 20px 20px;
+                padding: 10px 0 30px;
                 z-index: 999999;
                 position: absolute;
                 top: auto;
                 left: 0;
                 list-style: none;
                 text-align: left;
-                background: #ffffff; /* Old browsers */
-                background: -moz-linear-gradient(top,  #ffffff 0%, #eeeced 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(top,  #ffffff 0%,#eeeced 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(to bottom,  #ffffff 0%,#eeeced 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeced',GradientType=0 ); /* IE6-9 */
-
+                background: #ffffff;
+                background: -moz-linear-gradient(top,  #ffffff 0%, #eeeced 100%);
+                background: -webkit-linear-gradient(top,  #ffffff 0%,#eeeced 100%);
+                background: linear-gradient(to bottom,  #ffffff 0%,#eeeced 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeced',GradientType=0 );
                 // animation: showMenu .3s ease-out;
                 @include box-sizing;
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, .5);
                 li {
-                    display: inline-block;
-                    flex:1 1 30%;
+                    // display: inline-block;
+                    flex:0 1 33.33%;
                     vertical-align: top;
-                    margin: 0 5px;
-                    padding: 0;
+                    margin: 0;
+                    padding:0 5px;
+                    position: relative;
+                    &:before{
+                        content:'';
+                        width: 1px;
+                        height: 100%;
+                        background:#ddd ;
+                        position: absolute;
+                        left:0;
+                        top:0;
+                    }
+                    &:first-child{
+                        &:before{
+                            display: none;
+                        }
+                    }
                     a {
-                        padding: .5em;
-                        color: #336600;
+                        padding: .5em .8em;
+                        margin: 0 .5em;
                         font-weight: bold;
                         display: block;
+                        background: #d0d1ce;
+                        color:#222;
+                        border-radius: 3px;
+
                         &:hover, &:focus {
-                            background: #336600;
-                            color:#fff;
-                            border-radius: 3px;
+                            color:#111;
                         }
                     }
                 }
                 li.hasChild {
-                    >ul {
+
+                    ul {
                         position: relative;
                         z-index: 999;
                         top: 0;
@@ -147,43 +127,47 @@
                         animation: none;
                         display: block;
                         font-size: .875em;
-                        margin: 0;
+                        margin: .5em 0;
                         padding: 0; 
                         background: none;
+                        box-shadow: none;
 
                         li {
                             display: block;
-                            width: 96%;
-                            >a {
+                            position: relative;
+                            &:before{
+                                display: none;
+                            }
+
+                            a {
                                 color:#222;
-                                padding: .2em .5em;
+                                padding: .3em .5em .3em 1.8em;
+                                font-weight: normal;
+                                background: none;
+                                margin: 0;
+                                &:before{
+                                    content: '';
+                                    width: 4px;
+                                    height: 4px;
+                                    background: #666;
+                                    position: absolute;
+                                    left:1.3em;
+                                    top:.92em;
+                                }
+
                                 &:hover,
                                 &:focus {
-                                    color:#fff;
-                                    background: #336600;
-                                    // background: $primaryColor;
+                                    color:$primaryColor;
+                                    background: none;
                                 }
-                                // &:after {
-                                //     content: '';
-                                //     position: absolute;
-                                //     right: 10px;
-                                //     top: 1.3em;
-                                //     width: 6px;
-                                //     height: 6px;
-                                //     border: 2px solid #FFF;
-                                //     transform: rotate(45deg);
-                                //     border-bottom: none;
-                                //     border-left: none;
-                                // }
                             }
+
                         }
-                    }                    
+
+                    }
                 }
-                // ul {
-                //     top: 0;
-                //     left: 170px;
-                //     animation: none;
-                // }
+
+
             }
         }
     }
@@ -261,15 +245,17 @@
                 transition: .4s ease-out;
                 border-radius: 0!important;
                 margin: 0;
+                padding: 0;
             }
             ul {
                 display: block;
                 text-align: left;
                 margin: 0;
                 padding: 0;
+                font-size: 1.125em;
+                box-shadow: none;
                 ul {
                     display: none;
-                    width: 100%;
                     margin: 0;
                     background: rgba(0, 0, 0, .09);
                     font-size: .938em;
@@ -280,7 +266,10 @@
                     ul {
                         left: 0;
                         display: none;
-                        font-size: 1em;
+                        font-size: .938em;
+                        a{
+                            font-weight: normal;
+                        }
                         ul {
                             display: none;
                         }
@@ -290,7 +279,7 @@
             li {
                 display: block;
                 float: none;
-                width: 100%;
+
                 ul {
                     background: #FFF;
                 }
@@ -326,16 +315,32 @@
                 }
                 li {
                     background: #FFF;
+                    position: relative;
+                    margin: 0;
+                    padding: 0;
+
 
                     a {
                         min-height:2em;
                         line-height: 2em;
-                        padding: .5em 1em .5em 2em !important;
+                        padding: .5em 1em .5em 1.2em !important;
                         background: rgba(0, 0, 0, .05);
+                        &:before{
+                            content: '';
+                            width: 5px;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            top:0;
+                            background: $primaryColor;
+                        }
                         &:hover,
                         &:focus {
                             color: #000;
                             background: rgba(0, 0, 0, .15);
+                            border-top: none;
+                            border-left: none;
+                            border-right: none;
                         }
                     }
                     &.hasChild {
@@ -349,13 +354,32 @@
                         }
                     }
                     li {
+                        &:after{
+                            content: '';
+                            width: 5px;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            top:0;
+                            background: $color-yellow;
+                        }
                         a {
-                            background: rgba(0, 0, 0, .1) !important;
-                            padding: .5em 1em .5em 2em !important;
+                            // background: rgba(0, 0, 0, .1) !important;
+                            background: #fff!important;
+                            padding: .5em 1em .5em 2.4em !important;
                             border-bottom: 1px solid #BBB;
+                            &:before{
+                                content: '';
+                                width: 4px;
+                                height: 4px;
+                                background: #666;
+                                position: absolute;
+                                left:1.3em;
+                                top:1.4em;
+                            }
                             &:hover,
                             &:focus {
-                                background: rgba(0, 0, 0, .25) !important;
+                                background: rgba(0, 0, 0, .1) !important;
                             }
                             &:after {
                                 display: none !important;
@@ -396,12 +420,12 @@
                     line-height: 2em;
                     padding: .5em 1em;
                     font-size: .938em;
-                    color: #FFF;
+                    color: #222;
                     font-weight: bold;
                     text-decoration: none;
                     // border: 1px solid rgba(255, 255, 255, .5);
                     border-radius: 3px;
-                    background: #00a0ce;
+                    background: #fff;
                     margin: .3em 0;
                     @include box-sizing;
                     &:nth-child(odd) {
@@ -410,7 +434,8 @@
                     }
                     &:hover,
                     &:focus {
-                        background: darken(#00a0ce, 5);
+                        // background: darken($primaryColor, 5);
+                        background: #eee;
                     }
                 }
             }

@@ -85,7 +85,7 @@
             } 
             .right_col{
                 // flex:1 1 100%;
-                padding:10px 0;
+                padding:15px;
             } 
         }
     }
@@ -346,10 +346,10 @@
     .aCenter{
         text-align: center;
         @include screen('mobile') {
-           text-align: left; 
-       }
-   }
-   .leave{
+         text-align: left; 
+     }
+ }
+ .leave{
     margin-right: .5em;
 }
 
@@ -374,10 +374,10 @@
     .aCenter{
         text-align: center;
         @include screen('mobile') {
-           text-align: left; 
-       }
-   }
-   .leave{
+         text-align: left; 
+     }
+ }
+ .leave{
     margin-right: .5em;
 }
 
@@ -432,10 +432,10 @@
 }
 
 .right_col{
-   .Official{
-     ul{
-        display: block;
-    }
+ .Official{
+   ul{
+    display: block;
+}
 } 
 }
 
@@ -452,8 +452,8 @@
         color:#fff;
         display: block;
         padding: .45em 4em .3em 2em;
-        padding: .3em 4em .3em 2em\0;
-        -webkit-padding: .45em 4em .3em 2em;
+        // padding: .3em 4em .3em 2em\0;
+        // -webkit-padding: .45em 4em .3em 2em;
         position: relative;
         height: 34px;
         border-bottom-right-radius: 3px;
@@ -589,16 +589,19 @@
 }
 
 .left_col{
-  .funBlock{
-    margin: 0 1em 2em;
-    margin: 0 1em 2em\0;
-    -webkit-margin: 0 1em 2em;
-    @media screen and (max-width: 768px) {
-     margin: 0 0 2em;
-     margin: 0 0 2em\0;
-     -webkit-margin: 0 0 2em; 
- }
-}  
+    .col-6-6{
+        .container{
+            padding: 0!important;
+        }
+    }
+
+    .funBlock{
+        margin: 0 .5em 2em;
+        @include screen('tablet') {
+           margin: 0 0 2em;
+       }
+
+   }  
 }
 
 
